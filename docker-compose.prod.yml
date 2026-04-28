@@ -29,7 +29,7 @@ services:
   dashboard:
     build:
       context: .
-      dockerfile: Dockerfile.debian
+      dockerfile: Dockerfile
       args:
         - NODE_ENV=production
     container_name: mediamtx-dashboard
