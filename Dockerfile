@@ -83,7 +83,7 @@ COPY package.json pnpm-lock.yaml* ./
 # Use BuildKit cache mounts for the pnpm store so repeated builds are much faster.
 # pnpm's store dir is set to /pnpm/store (PNPM_STORE_PATH).
 RUN --mount=type=cache,id=pnpm-store,target=/pnpm/store \
-    pnpm install --frozen-lockfile --store-dir=/pnpm/store --reporter=silent
+    pnpm install --frozen-lockfile --store-dir=/pnpm/store --reporter=silent --prod=false
 
 # -----------------------
 # Stage: builder
